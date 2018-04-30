@@ -85,7 +85,7 @@ class ChatsCommand extends AdminCommand
                 $whois = $chat->getId();
                 if ($this->telegram->getCommandObject('whois')) {
                     // We can't use '-' in command because part of it will become unclickable
-                    $whois = '/whois' . str_replace('-', 'g', $chat->getId());
+                    $whois = '/whois ' . str_replace('-', 'g', $chat->getId());
                 }
 
                 if ($chat->isPrivateChat()) {
